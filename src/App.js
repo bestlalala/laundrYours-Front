@@ -1,9 +1,10 @@
-import './App.css';
+import React from 'react';
+import Home from "./Home";
 
 function App() {
   return (
     <>
-      <p>laundrYours 프로젝트 초기 세팅</p>
+      <Home />
     </>
   );
 }
