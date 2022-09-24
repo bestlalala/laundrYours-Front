@@ -33,7 +33,7 @@ function Search() {
                         {width:"300px", height: "20px", fontSize: "12pt"}
                     }
                 />
-                <Link to={`/search/${search}`}>
+                <Link to={`/searchResult/${search}`}>
                     <Button onClick={onClick}>검색</Button>
                 </Link>
             </form>
