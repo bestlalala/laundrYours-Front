@@ -18,10 +18,12 @@ function Search() {
             <form onSubmit={onSubmit}>
                 <input 
                     type="text" 
-                    width={300}
                     value={search}
                     onChange={onChange}
                     placeholder="세탁하려는 옷의 소재를 입력하세요"
+                    style={
+                        {width:"300px", height: "20px", fontSize: "12pt"}
+                    }
                 />
                 <SearchBtn value={search} />
             </form>

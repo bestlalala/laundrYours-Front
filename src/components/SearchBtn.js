@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./common/Button";
 
 function SearchBtn({ value }) {
     const setSearch = (value) => {
@@ -6,7 +7,7 @@ function SearchBtn({ value }) {
     }
     
     return (
-        <button onClick={setSearch}>검색</button>
+        <Button onClick={setSearch}>검색</Button>
     );
 }
 
