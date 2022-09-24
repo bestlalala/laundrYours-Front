@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Loader from "../Loader";
 import Search from "../components/Search";
-import MaterialList from "../components/MaterialList";
 
 function Home() {
     const [loading, setLoading] = useState(true);
@@ -9,8 +8,9 @@ function Home() {
     return (
         <div>
             {/* <Header /> */}
+            <img src="img/logo.png" alt="logo"
+                style={{width: '300px'} }/>
             <Search/>
-            <MaterialList/>
         </div>
     )
 }
