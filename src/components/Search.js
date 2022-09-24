@@ -1,12 +1,19 @@
 import { useState } from "react";
-import SearchBtn from "./SearchBtn";
+import { Link } from "react-router-dom";
+import Button from "./common/Button";
 
 function Search() {
     const [search, setSearch] = useState("");
     const onChange = (event) => {
         setSearch(event.target.value);
     };
-    const onSubmit = (event) => {
+    const onKeyDown = (event) => {
+        if (event.key === 'Enter'){
+            onClick();
+        }
+    };
+    const onClick = (event) => {
+        console.log(search);
         if (search === "") {
             return;
         }
@@ -15,17 +22,20 @@ function Search() {
 
     return (
         <div>
-            <form onSubmit={onSubmit}>
+            <form>
                 <input 
                     type="text" 
                     value={search}
                     onChange={onChange}
+                    onKeyDown={onKeyDown}
                     placeholder="세탁하려는 옷의 소재를 입력하세요"
                     style={
                         {width:"300px", height: "20px", fontSize: "12pt"}
                     }
                 />
-                <SearchBtn value={search} />
+                <Link to={`/search/${search}`}>
+                    <Button onClick={onClick}>검색</Button>
+                </Link>
             </form>
         </div>
     )
