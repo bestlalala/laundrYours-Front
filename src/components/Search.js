@@ -7,11 +7,7 @@ function Search() {
     const onChange = (event) => {
         setSearch(event.target.value);
     };
-    const onKeyDown = (event) => {
-        if (event.key === 'Enter'){
-            onClick();
-        }
-    };
+
     const onClick = (event) => {
         console.log(search);
         if (search === "") {
@@ -27,10 +23,9 @@ function Search() {
                     type="text" 
                     value={search}
                     onChange={onChange}
-                    onKeyDown={onKeyDown}
                     placeholder="세탁하려는 옷의 소재를 입력하세요"
                     style={
-                        {width:"300px", height: "20px", fontSize: "12pt"}
+                        {width:"300px", height: "25px", fontSize: "12pt"}
                     }
                 />
                 <Link to={`/searchResult/${search}`}>
