@@ -10,7 +10,10 @@ const Menubar = () => {
                 <Link to="/" >Home</Link>
             </span>
             <span className={styles.item}>
-                <Link to="/tips">꿀팁</Link>
+                <Link to="/tips">꿀팁공유</Link>
+            </span>
+            <span className={styles.item}>
+                <Link to="/laundry">주변 세탁소</Link>
             </span>
         </div>
         <Outlet />
